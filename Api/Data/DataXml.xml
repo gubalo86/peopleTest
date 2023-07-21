@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<People>
+	<Person>
+		<id>1</id>
+		<name>Gustavo</name>
+		<lastName>Bañuelos</lastName>
+		<age>37</age>
+	</Person>
+	<Person>
+		<id>2</id>
+		<name>Sebastian</name>
+		<lastName>Bañuelos</lastName>
+		<age>3</age>
+	</Person>
+</People>

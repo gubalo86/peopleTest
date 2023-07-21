@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <fieldset>
+        <legend>Person</legend>
+        <form [formGroup]="peopleForm">
+          <div class="form-floating mb-3">
+            <input
+              formControlName="id"
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              [readOnly]="true"
+            />
+            <label for="floatingInput">Id</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              formControlName="name"
+              type="text"
+              class="form-control"
+              id="floatingInput"
+            />
+            <label for="floatingInput">Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              formControlName="lastName"
+              type="text"
+              class="form-control"
+              id="floatingInput"
+            />
+            <label for="floatingInput">Last Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              formControlName="age"
+              type="number"
+              class="form-control"
+              id="floatingInput"
+            />
+            <label for="floatingInput">age</label>
+          </div>
+        </form>
+        <button class="btn btn-primary mb-2" (click)="onSave()">
+          Add / Update
+        </button>
+      </fieldset>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Age</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let person of people">
+            <th scope="row">{{person.id}}</th>
+            <td>{{person.name}}</td>
+            <td>{{person.lastName}}</td>
+            <td>{{person.age}}</td>
+            <td>
+              <button class="btn btn-sm btn-dark" (click)="onEdit(person)">
+                Edit
+              </button>
+              <button class="btn btn-sm btn-danger" (click)="onDelete(person)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
